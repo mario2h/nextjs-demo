@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Container from '../components/Container'
+import fetch from 'isomorphic-fetch'
 
 const HomePage = () => (
   <Container>
@@ -17,5 +18,9 @@ const HomePage = () => (
     </p>
   </Container>
 )
+
+HomePage.getInitialProps = (ctx) => {
+  fetch()
+}
 
 export default HomePage
